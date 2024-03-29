@@ -92,7 +92,7 @@ app.post("/api/signup", async (req, res) => {
                 from: 'localmart13@hotmail.com',
                 to: req.body.uname,
                 subject: 'Account Activation Mail from Local Mart',
-                text: `Hello${req.body.pname}\n\n Thanks for signing up on our website. Please click on the beow to activate your account and login on our website \n\n https://localmart.onrender.com/activateaccount?token=${token}`
+                text: `Hello${req.body.pname}\n\n Thanks for signing up on our website. Please click on the beow to activate your account and login on our website \n\n localmart.onrender.com/activateaccount?token=${token}`
             };
 
             // Use the transport object to send the email 
