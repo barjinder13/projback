@@ -92,7 +92,7 @@ app.post("/api/signup", async (req, res) => {
                 from: 'localmart13@hotmail.com',
                 to: req.body.uname,
                 subject: 'Account Activation Mail from Local Mart',
-                text: `Hello${req.body.pname}\n\n Thanks for signing up on our website. Please click on the beow to activate your account and login on our website \n\n http://localhost:3000/activateaccount?token=${token}`
+                text: `Hello${req.body.pname}\n\n Thanks for signing up on our website. Please click on the beow to activate your account and login on our website \n\n https://localmart.onrender.com/activateaccount?token=${token}`
             };
 
             // Use the transport object to send the email 
@@ -774,7 +774,7 @@ app.get('/api/forgotpassword', async (req, res) => {
         let saveresult = await newreset.save();
 
         if (saveresult) {
-            const resetLink = `http://localhost:3000/resetpassword?token=${resettoken}`;
+            const resetLink = `https://localmart.onrender.com/resetpassword?token=${resettoken}`;
             const mailOptions =
             {
                 from: 'localmart13@hotmail.com',
