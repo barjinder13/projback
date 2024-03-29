@@ -31,7 +31,7 @@ const e = require('express')
 var picname;
 let mystorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "uploads");   // 0we will have to create folder ourselves
+        cb(null, "public/uploads");   // 0we will have to create folder ourselves
     },
     filename: (req, file, cb) => {
         picname = Date.now() + file.originalname; // milliseconds will be added with original filenameand name will be stored in picname variable
